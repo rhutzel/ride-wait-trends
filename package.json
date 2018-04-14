@@ -8,7 +8,7 @@
   "keywords": ["serverless", "lambda", "dynamodb", "disney", "universal", "rides", "lines", "wait", "themeparks"],
   "main": "handler.js",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.0.0"
   },
   "dependencies": {
     "aws-sdk": "^2.224.1",
