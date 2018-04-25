@@ -1,7 +1,8 @@
 'use strict';
+/* eslint promise/prefer-await-to-then:off */
 
 const AWS = require('aws-sdk');
-const moment = require('moment');
+const moment = require('moment-timezone');
 const parks = require('themeparks');
 
 const extractWaits = (park, selectedRideNames) => {
@@ -29,7 +30,7 @@ const compileDbRecord = parkWaitLists => {
 		Item: parkWaitLists.reduce((existing, parkWaitList) => Object.assign(existing, parkWaitList), {
 			id: new Date().toISOString(),
 			week: parseInt(moment().format('W'), 10),
-			hourEastern: parseInt(moment().format('HH'), 10)
+			hourEastern: parseInt(moment().tz('America/New_York').format('HH'), 10)
 		})
 	};
 };

@@ -5,7 +5,15 @@
   "author": "Robert Hutzel <amoebob@fastmail.fm>",
   "license": "MIT",
   "homepage": "https://github.com/rhutzel/ride-wait-trends",
-  "keywords": ["serverless", "lambda", "dynamodb", "disney", "universal", "rides", "lines", "wait", "themeparks"],
+  "keywords": [
+    "serverless",
+    "lambda",
+    "dynamodb",
+    "disney",
+    "universal",
+    "rides",
+    "themeparks"
+  ],
   "main": "handler.js",
   "engines": {
     "node": ">=8.0.0"
@@ -13,6 +21,7 @@
   "dependencies": {
     "aws-sdk": "^2.224.1",
     "moment": "^2.22.0",
+    "moment-timezone": "^0.5.16",
     "themeparks": "^4.6.13"
   },
   "devDependencies": {
